@@ -1,6 +1,7 @@
 const input = document.getElementById('command-input');
 const terminalBody = document.getElementById('terminal-body');
 
+// 🎮 Danh sách game Steam
 const gamesList = [
     "Phasmophobia (Game săn ma cực cuốn)",
     "Hollow Knight (Siêu phẩm chặt chém thử thách)",
@@ -14,11 +15,12 @@ const gamesList = [
 
 let hasRolled = false;
 
+// Vẽ hộp quà bằng ASCII
 const giftBoxASCII = `
        🎁 🎁 🎁 🎁 🎁 🎁 🎁
       ┌───────────────────┐
       │  ┌─────────────┐  │
-      │  │  SECRET GIFT│  │
+      │  │ SECRET GIFT │  │
       │  └─────────────┘  │
       └───────────────────┘
 `;
@@ -45,58 +47,66 @@ function processCommand(cmd) {
     switch(cmd.toLowerCase()) {
         case '!lilac help':
             printOutput(`
-🌿 <span class="lilac-name">Lilac:</span> Đây là danh sách các mật mã dành cho anh Phú:
+🌿 <span class="lilac-name">Lilac:</span> Đây là danh sách các lệnh dành cho anh Phú:
 ----------------------------------------------------------------------
-  <span class="cmd-text">!lilac wish</span>   : Nhận lời chúc mừng sinh nhật từ Diễm Quỳnh 💌
-  <span class="cmd-text">!lilac secret</span> : Khám phá điều bí mật đang ẩn giấu... 🔮
-  <span class="cmd-text">!lilac random</span> : Mở hộp quà bí mật ngẫu nhiên từ Diễm Quỳnh! 🎁
-  <span class="cmd-text">clear</span>         : Dọn dẹp màn hình terminal
+  <span class="cmd-text">!lilac wish</span>   : Nhận lời chúc từ Diễm Quỳnh! 💌
+  <span class="cmd-text">!lilac secret</span> : Khám phá bí mật ẩn giấu... 🔮
+  <span class="cmd-text">!lilac random</span> : Random bí mật ngẫu nhiên từ Diễm Quỳnh! 🎁
+  <span class="cmd-text">clear</span>         : Xóa sạch màn hình terminal
 ----------------------------------------------------------------------
             `);
             break;
 
         case '!lilac wish':
             printOutput(`
-🌿 <span class="lilac-name">Lilac:</span> Đã tìm thấy 1 bức thư từ <span class="highlight-name">Diễm Quỳnh</span> gửi cho anh Phú!
+🌿 <span class="lilac-name">Lilac:</span> Đang tải thông điệp...
 <div class="wish-box">
 🎂 <b>CHÚC MỪNG SINH NHẬT TUỔI 20 DƯƠNG THIÊN PHÚ (TLOS)!</b> 🎂
 
-Chúc ông tuổi 20 luôn rực rỡ, code mượt mà không bao giờ gặp bug, 
-mọi dự án và dự định sắp tới đều thành công rực rỡ! 
-Cảm ơn ông vì đã luôn là một người bạn tuyệt vời. 
-Tuổi mới thật nhiều niềm vui và luôn giữ vững năng lượng tích cực nhé! ✨🌱
+
+Chúc mừng sinh nhật tuổi 20 của mày nha Dương Thiên Phú! Trước hết là 
+mong mày có sức khỏe tinh thần lẫn vật chất đều ổn định, khỏe mạnh, gặp
+được nhiều cơ hội mới, gặt hái được những điều mày mong muốn. Thứ hai
+là càng lớn thì sẽ càng gặp nhiều chuyện khó khăn, tao mong mày luôn
+tiến lên phía trước, đủ dũng cảm và đủ sức để vượt qua những chuyện
+ông trời thử thách mày, tao tin là mày sẽ làm được những điều mày muốn. 
+Thứ ba là mong cuộc sống của mày về sau sẽ tìm được góc nhỏ bình yên,
+một ai đó, hoặc điều gì đó làm cho thế giới trong đôi mắt mày có thêm
+màu sắc. Và cuối cùng thì chúc mày có ngày sinh nhật vui vẻ, những điều
+tốt đẹp sẽ đến với mày!
 </div>
-👉 <i>Gõ tiếp <span class="cmd-text">'!lilac secret'</span> để xem tiếp bất ngờ từ Quỳnh nhé!</i>
+👉 <i>Gõ tiếp <span class="cmd-text">!lilac secret</span> để xem tiếp Quỳnh giấu gì nhé!</i>
             `);
             break;
 
         case '!lilac secret':
             printOutput(`
-🌿 <span class="lilac-name">Lilac:</span> Hửm? Anh đang tò mò về bất ngờ tiếp theo đúng không?...
+🌿 <span class="lilac-name">Lilac:</span> Đang giải mã dữ liệu ẩn...
 <div class="secret-box">
-Thật ra sinh nhật 20 tuổi đâu chỉ có lời chúc suông đúng không nào? 
-Diễm Quỳnh đã chuẩn bị sẵn một bất ngờ nho nhỏ ẩn giấu ngay trong hệ thống này.
+Sinh nhật tuổi 20 mà chỉ có vài dòng chữ thì có phải hơi kì lạ quá 
+đúng không? 
 
-Một chút giải trí dành riêng cho anh sau những giờ chạy deadline và code căng thẳng...
-Nhưng món quà cụ thể là gì thì đến cả Lilac cũng chưa biết đâu!
+Nên Diễm Quỳnh đã cất công che giấu hẳn một đoạn mã bí mật trong hệ 
+thống này. Có một thứ gì đó đang chờ Phú kích hoạt để giải trí sau 
+những giờ chạy deadline bù đầu.
 </div>
-👉 <i>Hãy gõ ngay <span class="cmd-text">'!lilac random'</span> để Lilac kích hoạt hộp quà mở ra bí mật nhé! 🎁</i>
+👉 <i>Gõ ngay <span class="cmd-text">!lilac random</span> để xem bí mật đó là gì nha! 🎁</i>
             `);
             break;
 
         case '!lilac random':
             if (hasRolled) {
-                printOutput(`🌿 <span class="lilac-name">Lilac:</span> <span class="error">⚠️ Cảnh báo: Món quà bí mật đã được mở rồi! Anh Phú chụp màn hình gửi Quỳnh chưa đó? 😉</span>`);
+                printOutput(`🌿 <span class="lilac-name">Lilac:</span> <span class="error">⚠️ Cảnh báo: Bí mật chỉ được random 1 lần thôi! Đừng quên chụp màn hình gửi Quỳnh nhé! </span>`);
                 break;
             }
 
-            printOutput(`🌿 <span class="lilac-name">Lilac:</span> Đang tải Hộp quà bí mật...`);
+            printOutput(`🌿 <span class="lilac-name">Lilac:</span> Đang trích xuất Hộp quà bí mật...`);
             printOutput(`<pre style="color: #ffb703;">${giftBoxASCII}</pre>`);
 
             let count = 0;
             const interval = setInterval(() => {
                 const tempGame = gamesList[Math.floor(Math.random() * gamesList.length)];
-                printOutput(`[LILAC SYSTEM] Unboxing item... 🎲 <span style="color: #90e0ef;">${tempGame}</span>`);
+                printOutput(`[LILAC SYSTEM] Randomizing... 🎲 <span style="color: #90e0ef;">${tempGame}</span>`);
                 terminalBody.scrollTop = terminalBody.scrollHeight;
                 count++;
 
@@ -105,16 +115,17 @@ Nhưng món quà cụ thể là gì thì đến cả Lilac cũng chưa biết đ
                     const finalGame = gamesList[Math.floor(Math.random() * gamesList.length)];
 
                     printOutput(`
-✨ <b>Ô HÓA RA ĐÂY CHÍNH LÀ QUÀ SINH NHẬT!</b> ✨
+✨ <b>OH HOÁ RA ĐÂY LÀ QUÀ!</b> ✨
 ----------------------------------------------------------------------
-🎁 Món quà Steam ngẫu nhiên mà Quỳnh gửi tặng anh Phú là:
+🎁 Bí mật mà Diễm Quỳnh dành tặng Phú là một tựa game Steam:
 <div class="gift-result">🎮 GAME: ${finalGame} 🎮</div>
-📸 <b>HƯỚNG DẪN NHẬN QUÀ:</b>
-<i>Anh Phú hãy <b>CHỤP MÀNH HÌNH</b> này lại và gửi ngay cho <b>Diễm Quỳnh</b> 
-để nhận Key/Gift Game qua Steam nhé! 🚀</i>
+📸 <b>LÀM SAO ĐỂ NHẬN?</b>
+<i>Giờ bạn hãy <b>CHỤP MÀNH HÌNH</b> này lại và gửi ngay cho <b>Diễm Quỳnh</b> 
+để nhận quà đi nhé! 🚀</i>
 ----------------------------------------------------------------------
                     `);
 
+                    // Hiệu ứng pháo hoa
                     confetti({
                         particleCount: 120,
                         spread: 80,
@@ -136,6 +147,6 @@ Nhưng món quà cụ thể là gì thì đến cả Lilac cũng chưa biết đ
             break;
 
         default:
-            printOutput(`🌿 <span class="lilac-name">Lilac:</span> Lệnh không hợp lệ rùi! Gõ <span class="cmd-text">'!lilac help'</span> để xem hướng dẫn nha.`);
+            printOutput(`🌿 <span class="lilac-name">Lilac:</span> Lệnh này tớ chưa học! Gõ <span class="cmd-text">!lilac help</span> để xem danh sách lệnh nhé.`);
     }
 }
