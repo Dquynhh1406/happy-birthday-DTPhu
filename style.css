@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #e8e3d9; /* Màu be trầm nền ngoài */
+    background-color: #e8e3d9; /* Màu be làm nền trang web */
     color: #2b2d42;
     font-family: 'Consolas', 'Fira Code', 'Courier New', monospace;
     display: flex;
@@ -19,7 +19,7 @@ body {
     width: 100%;
     max-width: 800px;
     height: 520px;
-    background-color: #1b4332; /* Xanh lá đậm phong cách thiên nhiên */
+    background-color: #1b4332; /* Màu xanh lá đậm cho Terminal */
     border-radius: 12px;
     box-shadow: 0 12px 35px rgba(27, 67, 50, 0.35);
     border: 3px solid #40916c;
@@ -65,7 +65,7 @@ body {
     overflow-y: auto;
     font-size: 14.5px;
     line-height: 1.6;
-    color: #f5ebe0; /* Màu chữ chính: be sáng */
+    color: #f5ebe0; /* Màu be sáng cho text thông thường */
 }
 
 .output {
@@ -88,7 +88,7 @@ body {
 }
 
 .prompt {
-    color: #74c69d;
+    color: #74c69d; /* Xanh lá tươi */
     font-weight: bold;
     margin-right: 8px;
 }
@@ -96,7 +96,7 @@ body {
 input {
     background: transparent;
     border: none;
-    color: #fff3b0; /* Màu chữ khi gõ: be vàng */
+    color: #fff3b0; /* Màu text khi user gõ */
     font-family: inherit;
     font-size: 15px;
     font-weight: bold;
@@ -104,9 +104,11 @@ input {
     outline: none;
 }
 
-.lilac-name { color: #d8bbff; font-weight: bold; }
+/* Các màu sắc custom cho bot và thông báo */
+.lilac-name { color: #d8bbff; font-weight: bold; } /* Màu tím Lilac */
 .highlight-name { color: #ffb703; font-weight: bold; }
 .cmd-text { color: #52b788; font-weight: bold; }
+
 .wish-box {
     border-left: 4px solid #ffb703;
     padding-left: 12px;
@@ -116,6 +118,7 @@ input {
     padding-bottom: 8px;
     margin: 8px 0;
 }
+
 .secret-box {
     border-left: 4px solid #d8bbff;
     padding-left: 12px;
@@ -125,6 +128,7 @@ input {
     padding-bottom: 8px;
     margin: 8px 0;
 }
+
 .gift-result {
     color: #ffbe0b;
     font-size: 16px;
