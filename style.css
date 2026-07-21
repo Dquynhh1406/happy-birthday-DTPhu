@@ -5,8 +5,8 @@
 }
 
 body {
-    background-color: #e8e3d9; /* Màu be làm nền trang web */
-    color: #2b2d42;
+    background-color: #FFFFF0; /* Màu nền chính: Trắng ngà (Ivory) */
+    color: #00676B;           /* Màu chữ chủ đạo: Xanh cổ vịt */
     font-family: 'Consolas', 'Fira Code', 'Courier New', monospace;
     display: flex;
     justify-content: center;
@@ -19,21 +19,21 @@ body {
     width: 100%;
     max-width: 800px;
     height: 520px;
-    background-color: #1b4332; /* Màu xanh lá đậm cho Terminal */
+    background-color: #E6F2F2; /* Màu nền bên trong Terminal: Xanh ngọc nhạt sáng sủa */
     border-radius: 12px;
-    box-shadow: 0 12px 35px rgba(27, 67, 50, 0.35);
-    border: 3px solid #40916c;
+    box-shadow: 0 12px 35px rgba(0, 103, 107, 0.15); /* Đổ bóng nhẹ theo tone xanh */
+    border: 3px solid #00676B;  /* Viền ngoài Terminal sắc nét */
     display: flex;
     flex-direction: column;
     overflow: hidden;
 }
 
 .terminal-header {
-    background-color: #081c15;
+    background-color: #004F52; /* Xanh đậm hơn cho thanh tiêu đề */
     padding: 12px 15px;
     display: flex;
     align-items: center;
-    border-bottom: 2px solid #2d6a4f;
+    border-bottom: 2px solid #00676B;
 }
 
 .header-buttons {
@@ -52,7 +52,7 @@ body {
 .green { background-color: #27c93f; }
 
 .title {
-    color: #d8f3dc;
+    color: #FFFFF0;
     font-size: 13px;
     margin-left: auto;
     margin-right: auto;
@@ -65,7 +65,7 @@ body {
     overflow-y: auto;
     font-size: 14.5px;
     line-height: 1.6;
-    color: #f5ebe0; /* Màu be sáng cho text thông thường */
+    color: #00565A; /* Màu chữ nội dung bên trong */
 }
 
 .output {
@@ -74,11 +74,11 @@ body {
 }
 
 .welcome-banner {
-    color: #b7e4c7;
-    border: 1px dashed #52b788;
+    color: #004F52;
+    border: 1px dashed #00676B;
     padding: 12px;
     border-radius: 8px;
-    background: rgba(45, 106, 79, 0.2);
+    background: rgba(0, 103, 107, 0.06);
 }
 
 .input-line {
@@ -88,7 +88,7 @@ body {
 }
 
 .prompt {
-    color: #74c69d; /* Xanh lá tươi */
+    color: #007A80; /* Xanh lá-xanh dương nổi bật ở dòng gõ lệnh */
     font-weight: bold;
     margin-right: 8px;
 }
@@ -96,7 +96,7 @@ body {
 input {
     background: transparent;
     border: none;
-    color: #fff3b0; /* Màu text khi user gõ */
+    color: #003336; /* Màu chữ khi anh Phú gõ phím (đậm và rõ nét) */
     font-family: inherit;
     font-size: 15px;
     font-weight: bold;
@@ -104,40 +104,41 @@ input {
     outline: none;
 }
 
-/* Các màu sắc custom cho bot và thông báo */
-.lilac-name { color: #d8bbff; font-weight: bold; } /* Màu tím Lilac */
-.highlight-name { color: #ffb703; font-weight: bold; }
-.cmd-text { color: #52b788; font-weight: bold; }
+/* Các điểm nhấn màu sắc tùy chỉnh */
+.lilac-name { color: #5B247A; font-weight: bold; } /* Màu tím đậm sang trọng cho mascot Lilac */
+.highlight-name { color: #B35900; font-weight: bold; } /* Màu cam đất nổi bật cho tên Dương Thiên Phú */
+.cmd-text { color: #00676B; font-weight: bold; text-decoration: underline; }
 
 .wish-box {
-    border-left: 4px solid #ffb703;
+    border-left: 4px solid #B35900;
     padding-left: 12px;
-    color: #f4f1de;
-    background: rgba(255, 183, 3, 0.08);
+    color: #004F52;
+    background: rgba(179, 89, 0, 0.05);
     padding-top: 8px;
     padding-bottom: 8px;
     margin: 8px 0;
 }
 
 .secret-box {
-    border-left: 4px solid #d8bbff;
+    border-left: 4px solid #5B247A;
     padding-left: 12px;
-    color: #e8e8e4;
-    background: rgba(216, 187, 255, 0.08);
+    color: #004F52;
+    background: rgba(91, 36, 122, 0.05);
     padding-top: 8px;
     padding-bottom: 8px;
     margin: 8px 0;
 }
 
 .gift-result {
-    color: #ffbe0b;
+    color: #FFFFFF;
     font-size: 16px;
     font-weight: bold;
-    background: #2d6a4f;
+    background: #00676B;
     padding: 10px;
     border-radius: 6px;
-    border: 1px solid #74c69d;
+    border: 1px solid #004F52;
     text-align: center;
     margin: 10px 0;
 }
-.error { color: #ff6b6b; }
+
+.error { color: #C92A2A; font-weight: bold; }
