@@ -1,7 +1,7 @@
 const input = document.getElementById('command-input');
 const terminalBody = document.getElementById('terminal-body');
 
-// 🎮 Danh sách quà
+// 🎁 Danh sách quà (Bao gồm tiền mặt và các tựa game)
 const presentlist = [
     "100.000 VNĐ",
     "120.000 VNĐ",
@@ -10,7 +10,7 @@ const presentlist = [
     "Valheim",
     "Overcooked! 2",
     "Rain World",
-    "Shift At Midnight",
+    "Shift At Midnight"
 ];
 
 let hasRolled = false;
@@ -63,7 +63,6 @@ function processCommand(cmd) {
 <div class="wish-box">
 🎂 <b>CHÚC MỪNG SINH NHẬT TUỔI 20 DƯƠNG THIÊN PHÚ (TLOS)!</b> 🎂
 
-
 Chúc mừng sinh nhật tuổi 20 của mày nha Dương Thiên Phú! Trước hết là 
 mong mày có sức khỏe tinh thần lẫn vật chất đều ổn định, khỏe mạnh, gặp
 được nhiều cơ hội mới, gặt hái được những điều mày mong muốn. Thứ hai
@@ -96,29 +95,29 @@ những giờ chạy deadline bù đầu.
 
         case '!lilac random':
             if (hasRolled) {
-                printOutput(`🌿 <span class="lilac-name">Lilac:</span> <span class="error">⚠️ Cảnh báo: Bí mật chỉ được random 1 lần thôi! Đừng quên chụp màn hình gửi Quỳnh nhé! </span>`);
+                printOutput(`🌿 <span class="lilac-name">Lilac:</span> <span class="error">⚠️ Cảnh báo: Bí mật chỉ được random 1 lần thôi! Đừng quên chụp màn hình gửi Quỳnh nhé! 😉</span>`);
                 break;
             }
 
             printOutput(`🌿 <span class="lilac-name">Lilac:</span> Đang trích xuất Hộp quà bí mật...`);
-            printOutput(`<pre style="color: #ffb703;">${giftBoxASCII}</pre>`);
+            printOutput(`<pre style="color: #B35900;">${giftBoxASCII}</pre>`);
 
             let count = 0;
             const interval = setInterval(() => {
-                const tempGame = gamesList[Math.floor(Math.random() * gamesList.length)];
-                printOutput(`[LILAC SYSTEM] Randomizing... 🎲 <span style="color: #90e0ef;">${tempGame}</span>`);
+                const tempGift = presentlist[Math.floor(Math.random() * presentlist.length)];
+                printOutput(`[LILAC SYSTEM] Randomizing... 🎲 <span style="color: #00676B;">${tempGift}</span>`);
                 terminalBody.scrollTop = terminalBody.scrollHeight;
                 count++;
 
                 if (count >= 6) {
                     clearInterval(interval);
-                    const finalGame = gamesList[Math.floor(Math.random() * gamesList.length)];
+                    const finalGift = presentlist[Math.floor(Math.random() * presentlist.length)];
 
                     printOutput(`
 ✨ <b>OH HOÁ RA ĐÂY LÀ QUÀ!</b> ✨
 ----------------------------------------------------------------------
-🎁 Bí mật mà Diễm Quỳnh dành tặng Phú là một tựa game Steam:
-<div class="gift-result">🎮 GAME: ${finalGame} 🎮</div>
+🎁 Món quà bất ngờ mà Diễm Quỳnh dành tặng Phú là:
+<div class="gift-result">🎁 ${finalGift} 🎁</div>
 📸 <b>LÀM SAO ĐỂ NHẬN?</b>
 <i>Giờ bạn hãy <b>CHỤP MÀNH HÌNH</b> này lại và gửi ngay cho <b>Diễm Quỳnh</b> 
 để nhận quà đi nhé! 🚀</i>
