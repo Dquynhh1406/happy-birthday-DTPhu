@@ -1,16 +1,16 @@
 const input = document.getElementById('command-input');
 const terminalBody = document.getElementById('terminal-body');
 
-// 🎮 Danh sách game Steam
-const gamesList = [
-    "Phasmophobia (Game săn ma cực cuốn)",
-    "Hollow Knight (Siêu phẩm chặt chém thử thách)",
-    "Resident Evil 7: Biohazard (Kinh dị đỉnh cao)",
-    "Celeste (Game nhảy nền siêu khó)",
-    "Portal 2 (Game giải đố hack não)",
-    "Subnautica (Sinh tồn khám phá đại dương)",
-    "Cuphead (Bắn boss phong cách hoạt hình cổ điển)",
-    "Dead Cells (Hành động chặt chém cực đã)"
+// 🎮 Danh sách quà
+const presentlist = [
+    "100.000 VNĐ",
+    "120.000 VNĐ",
+    "150.000 VNĐ",
+    "The NOexistenceN of you AND me + Five Nights at Freddy's",
+    "Valheim",
+    "Overcooked! 2",
+    "Rain World",
+    "Shift At Midnight",
 ];
 
 let hasRolled = false;
