@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lilac V-1406 - Happy 20th Birthday TLOS!</title>
+    <title>Lilac Terminal - Happy 20th Birthday TLOS!</title>
     <link rel="stylesheet" href="style.css">
     <!-- Thư viện hiệu ứng pháo hoa -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
+    <!-- Trình phát nhạc nền ẩn -->
+    <audio id="bg-music" loop>
+        <source src="emtrangtri-ngot.mp3" type="audio/mpeg">
+    </audio>
+
     <div class="terminal">
         <div class="terminal-header">
             <div class="header-buttons">
@@ -23,10 +28,13 @@
   ✨ 𝕃𝕀𝕃𝔸ℂ 𝕄𝔸𝕊ℂ𝕆𝕋 ✨
 ======================================================
   🌿 Xin chào <span class="highlight-name">Dương Thiên Phú (TLOS)</span>!
-  Tôi là <span class="lilac-name">Lilac</span> - người sẽ hướng dẫn anh phiêu lưu khám phá 
+  Tôi là <span class="lilac-name">Lilac</span> - mascot sẽ hướng dẫn anh khám phá 
   món quà sinh nhật tuổi 20 đặc biệt ngày hôm nay!
 
-  💡 Gõ <span class="cmd-text">!lilac help</span> để xem danh sách các thần chú nhé!
+  🎵 <i>Hệ thống sẽ tự động bật nhạc nền (Em Trang Trí - Ngọt) 
+     khi anh gõ lệnh đầu tiên để trải nghiệm thêm phần "chill" nhé!</i>
+
+  💡 Gõ <span class="cmd-text">!lilac help</span> để xem danh sách các lệnh!
 ======================================================
             </div>
             <div class="input-line">
